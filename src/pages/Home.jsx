@@ -18,7 +18,7 @@ function Home() {
         <ServiceSection />
         <CTASection />
       </main>
-      <footer>
+      <footer className="border-t-2 border-t-stone-100 border-b-4 border-b-main px-16 py-8 bg-mainWhite">
         <Footer />
       </footer>
     </div>

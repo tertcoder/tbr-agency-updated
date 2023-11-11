@@ -3,7 +3,7 @@ import tbrsvg from "../../assets/images/tbr.svg";
 
 function HeroSection() {
   return (
-    <section id="home" className=" pt-24 grid grid-cols-2 bg-mainLight">
+    <section id="home" className="  grid grid-cols-2 bg-mainLight">
       <div className="self-center pl-24 pr-5">
         <h1 className="text-6xl text-mainBlack font-bold mb-5">
           Best platform for Traveling, Booking, Renting and moving your business
