@@ -2,7 +2,10 @@ import Overlay from "../../ui/Overlay";
 
 function AboutSection() {
   return (
-    <section id="about" className="flex flex-col pt-32  pb-0 container mx-auto">
+    <section
+      id="about"
+      className="flex flex-col pt-32  pb-0   max-w-3xl lg:max-w-5xl xl:max-w-7xl   mx-auto"
+    >
       <div className="pt-5 pb-10 flex">
         <h2 className="text-4xl flex-1 font-semibold text-mainBlack">
           Why TBR Agency?
@@ -15,7 +18,7 @@ function AboutSection() {
       </div>
       <div className="flex-1 bg-travel bg-cover bg-[0_80%] rounded-xl relative flex items-end p-8">
         <Overlay className=" bg-mainLight/20" />
-        <div className="flex  space-x-4 ">
+        <div className="flex lg:flex-row flex-col space-y-4 lg:space-x-4 ">
           <div className=" text-mainWhite rounded-lg p-8 bg-mainBlack  shadow-sm shadow-mainBlack font-medium">
             <p className="text-xl">
               For traveling, We are the people you can rely on when you need to

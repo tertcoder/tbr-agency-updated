@@ -3,9 +3,9 @@ import tbrsvg from "../../assets/images/tbr.svg";
 
 function HeroSection() {
   return (
-    <section id="home" className="  grid grid-cols-2 bg-mainLight">
-      <div className="self-center pl-24 pr-5">
-        <h1 className="text-6xl text-mainBlack font-bold mb-5">
+    <section id="home" className="pt-32 flex-col  flex  bg-mainLight">
+      <div className="max-w-4xl mx-auto flex flex-col items-center ">
+        <h1 className="text-6xl text-mainBlack text-center font-bold mb-5">
           Best platform for Traveling, Booking, Renting and moving your business
           fast
         </h1>
@@ -14,7 +14,9 @@ function HeroSection() {
           Rent a house from anywhere you want with TBR Agency the all-in-one
           platform.
         </p>
-        <Button type="prime">Get Started</Button>
+        <div>
+          <Button type="prime">Get Started</Button>
+        </div>
       </div>
       <div className="self-center">
         <img src={tbrsvg} alt="tbr city" />

@@ -5,7 +5,7 @@ import Overlay from "../../ui/Overlay";
 function CTASection() {
   return (
     <section id="ctaSection" className="py-24 bg-mainWhite">
-      <div className="container mx-auto bg-mainBlack shadow-md rounded-xl flex overflow-hidden">
+      <div className="max-w-3xl lg:max-w-5xl xl:max-w-7xl  mx-auto bg-mainBlack shadow-md rounded-xl flex overflow-hidden">
         <div className="flex-1 px-10 py-24">
           <h1 className="text-6xl text-mainLight max-w-lg font-bold mb-5">
             Start business with TBR Agency
@@ -19,12 +19,12 @@ function CTASection() {
             <Button type="primeLight">Get Started</Button>
           </div>
         </div>
-        <div className="flex-1 relative">
+        <div className="lg:flex-1 relative">
           <Overlay className="bg-mainBlack/20" />
           <img
             src={taxi}
             alt="TBR taxi"
-            className="object-cover h-full w-full"
+            className="hidden object-cover lg:block h-full w-full"
           />
         </div>
       </div>
