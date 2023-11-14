@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <div className="relative font-regular font-roboto text-mainBlackLight">
-      <header className="fixed z-20 top-0 left-0 bg-mainWhite/40 backdrop-blur-sm w-full">
+      <header className="fixed z-20 top-0 left-0 bg-mainWhite/50 backdrop-blur-sm w-full">
         <NavigationHeader />
       </header>
       <main>
