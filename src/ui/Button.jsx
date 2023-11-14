@@ -1,8 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
-function Button({ type, children }) {
-  const base =
-    "font-semibold bg-main text-mainWhite rounded-xl hover:opacity-90 duration-150 text-lg";
+function Button({ type, className, children }) {
+  const base = twMerge(
+    `font-semibold bg-main text-mainWhite rounded-xl hover:opacity-90 duration-150 text-lg`,
+    `${className && className}`
+  );
   const prime = "py-3 px-6";
   const primeLight =
     "py-3 px-6 bg-transparent border-2 border-mainLight text-mainLight hover:border-main hover:text-main ";

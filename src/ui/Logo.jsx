@@ -3,7 +3,10 @@ import logo from "../assets/images/tbr-logo.png";
 function Logo({ type }) {
   return (
     <div
-      className={twMerge(`block`, `${type === "headerLogo" ? "w-28" : "w-36"}`)}
+      className={twMerge(
+        `block`,
+        `${type === "headerLogo" ? "w-[7rem]" : "w-36"}`
+      )}
     >
       <img src={logo} alt="TBR Logo" />
     </div>

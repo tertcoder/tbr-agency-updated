@@ -6,9 +6,9 @@ function ServiceSection() {
   return (
     <section
       id="services"
-      className="max-w-3xl lg:max-w-5xl xl:max-w-7xl   mx-auto pb-24 pt-32"
+      className="max-w-3xl lg:max-w-5xl xl:max-w-7xl px-2 md:px-5 lg:px-2  mx-auto pb-24 pt-32"
     >
-      <h2 className="text-4xl font-semibold mb-10 text-mainBlack text-center">
+      <h2 className="text-3xl lg:text-4xl font-semibold mb-10 text-mainBlack text-center">
         What TBR-Agency has for you
       </h2>
       <div className="grid grid-rows-[500px_auto] lg:grid-rows-none lg:grid-cols-[350px_1fr]   xl:grid-cols-[500px_1fr] h-full rounded-xl lg:space-x-4">
@@ -21,8 +21,8 @@ function ServiceSection() {
           />
           <DotNav imgsize={[1, 2, 3]} />
         </div>
-        <div className="bg-mainWhite shadow-sm text-mainBlack grid grid-cols-1 xl:grid-cols-2 rounded-b-xl space-y-8 xl:space-y-0 lg:rounded-xl px-8 py-10 lg:px-10 lg:py-10">
-          <div className="bg-white xl:m-2 p-6 rounded-lg shadow-sm">
+        <div className="bg-mainWhite shadow-sm text-mainBlack grid grid-cols-1 gap-4 xl:grid-cols-2 rounded-b-xl lg:rounded-xl p-4 md:px-8 md:py-10 lg:px-10 lg:py-10">
+          <div className="bg-white p-5 md:p-6 rounded-lg shadow-sm">
             <h3 className="text-2xl mb-5 font-medium text-main">
               Rent a house for your vacations
             </h3>
@@ -34,7 +34,7 @@ function ServiceSection() {
             </p>
           </div>
 
-          <div className="bg-white xl:m-2 p-6 rounded-lg shadow-sm">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="text-2xl mb-5 font-medium text-main">
               Explore available Hotels
             </h3>
@@ -44,7 +44,7 @@ function ServiceSection() {
               our hospitality.
             </p>
           </div>
-          <div className="bg-white xl:m-2 p-6 rounded-lg shadow-sm xl:col-span-2">
+          <div className="bg-white p-6 rounded-lg shadow-sm xl:col-span-2">
             <h3 className="text-2xl mb-5 font-medium text-main">
               Book a ride in easy and convenient way
             </h3>

@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   section {
-    @apply min-h-screen scroll-py-5;
+    @apply md:min-h-screen;
   }
   #ctaSection {
     @apply min-h-0;

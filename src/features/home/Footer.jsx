@@ -4,11 +4,10 @@ import Facebook from "../../assets/images/Facebook.svg";
 import Twitter from "../../assets/images/Twitter.svg";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
   return (
-    <div className="grid grid-cols-[2fr_3fr]">
-      <div className="text-base">
-        <Logo type="" />
+    <div className="grid grid-cols-1 md:max-w-3xl lg:max-w-5xl xl:max-w-7xl  mx-auto  md:grid-cols-[2fr_3fr]">
+      <div className="text-base flex flex-col items-center md:block mb-4 md:mb-0">
+        <Logo />
         <a href="#">info@tbragency.com</a>
         <div className="flex gap-5 my-4">
           <a className="w-6 h-6">
@@ -21,12 +20,8 @@ function Footer() {
             <img src={Twitter} className="w-full h-full" />
           </a>
         </div>
-        <p className="text-sm">
-          Copyright ©{currentYear} by <b>TBR Agency</b>, Inc. All rights
-          reserved
-        </p>
       </div>
-      <div className="grid grid-cols-3">
+      <div className="flex justify-between sm:justify-evenly  md:justify-between items-center">
         <div>
           <h2 className="font-medium text-mainBlack mb-4">Support</h2>
           <ul>
