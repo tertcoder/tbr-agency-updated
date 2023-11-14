@@ -5,7 +5,7 @@ function Logo({ type }) {
     <div
       className={twMerge(
         `block`,
-        `${type === "headerLogo" ? "w-[7rem]" : "w-36"}`
+        `${type === "headerLogo" ? "w-[7.95rem]" : "w-36"}`
       )}
     >
       <img src={logo} alt="TBR Logo" />
