@@ -9,8 +9,8 @@ function DotNav({ imgsize, setImgIndex, currentImgIndex }) {
             `w-3 h-3 rounded-full border-2 border-mainWhite`,
             `${i === currentImgIndex && "border-main bg-main"}`
           )}
-          onClick={() => setImgIndex(i)}
           key={i}
+          onClick={() => setImgIndex(i)}
         ></button>
       ))}
     </div>

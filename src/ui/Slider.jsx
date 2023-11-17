@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Overlay from "./Overlay";
-import DotNav from "./DotNav";
+// import DotNav from "./DotNav";
 
 function Slider({ images }) {
   const [imgIndex, setImgIndex] = useState(0);
@@ -24,18 +24,18 @@ function Slider({ images }) {
   //   return () => {};
   // }, [images.length]);
 
-  function showPrevImg() {
-    setImgIndex(index => {
-      if (index == 0) return images.length - 1;
-      return index - 1;
-    });
-  }
-  function showNextImg() {
-    setImgIndex(index => {
-      if (index === images.length - 1) return 0;
-      return index + 1;
-    });
-  }
+  // function showPrevImg() {
+  //   setImgIndex(index => {
+  //     if (index == 0) return images.length - 1;
+  //     return index - 1;
+  //   });
+  // }
+  // function showNextImg() {
+  //   setImgIndex(index => {
+  //     if (index === images.length - 1) return 0;
+  //     return index + 1;
+  //   });
+  // }
   return (
     <div className="bg-mainBlack text-mainWhite text-4xl relative rounded-t-xl lg:rounded-xl overflow-hidden ">
       <Overlay className="bg-mainBlack/20" />
@@ -53,11 +53,18 @@ function Slider({ images }) {
           />
         ))}
       </div>
-      <DotNav
-        currentImgIndex={imgIndex}
-        setImgIndex={setImgIndex}
-        imgsize={[1, 2, 3]}
-      />
+      <div className="flex gap-4 absolute bottom-4 left-1/2 -translate-x-1/2">
+        {images.map((_, i) => (
+          <button
+            className={twMerge(
+              `w-3 h-3 rounded-full border-2 border-mainWhite`,
+              `${i === imgIndex && "border-main bg-main"}`
+            )}
+            key={i}
+            onClick={() => setImgIndex(i)}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 }
