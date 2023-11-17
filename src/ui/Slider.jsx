@@ -1,50 +1,64 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import Overlay from "./Overlay";
+import DotNav from "./DotNav";
 
-function Slider({ content }) {
-  const [contentIndex, setContentIndex] = useState(0);
-  function showPrevContent() {
-    setContentIndex(index => {
-      if (index == 0) return content.length - 1;
+function Slider({ images }) {
+  const [imgIndex, setImgIndex] = useState(0);
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setImgIndex(index => {
+  //       if (index === images.length - 1) return 0;
+  //       return index + 1;
+  //     });
+  //   }, 3000);
+  // }, []);
+  // const timeoutRef = useRef(null);
+  // useEffect(() => {
+  //   (timeoutRef.current = setTimeout(() =>
+  //     setImgIndex(index => (index === images.length - 1 ? 0 : index + 1))
+  //   )),
+  //     2500;
+
+  //   return () => {};
+  // }, [images.length]);
+
+  function showPrevImg() {
+    setImgIndex(index => {
+      if (index == 0) return images.length - 1;
       return index - 1;
     });
   }
-  function showNextContent() {
-    setContentIndex(index => {
-      if (index === content.length - 1) return 0;
+  function showNextImg() {
+    setImgIndex(index => {
+      if (index === images.length - 1) return 0;
       return index + 1;
     });
   }
   return (
-    <>
-      <div className="relative h-full flex-1">
-        <img src={content[contentIndex].bgImage} alt="travel" />
-        <div className="absolute rounded-lg p-8 bottom-4 right-4 w-[525px] bg-mainWhite/80">
-          <p className="text-xl">{content[contentIndex].text}</p>
-        </div>
-        <button
-          className="absolute top-1/2 text-rose-400 bg-gray-600 p-4 rounded-full w-14 flex items-center justify-center h-14 left-4"
-          onClick={showPrevContent}
-        >
-          Prev
-        </button>
-        <button
-          className="absolute top-1/2 text-rose-400 bg-gray-600 p-4 rounded-full w-14 flex items-center justify-center h-14 right-4"
-          onClick={showNextContent}
-        >
-          Next
-        </button>
+    <div className="bg-mainBlack text-mainWhite text-4xl relative rounded-t-xl lg:rounded-xl overflow-hidden ">
+      <Overlay className="bg-mainBlack/20" />
+      <div className="w-full h-full flex">
+        {images.map((image, i) => (
+          <img
+            src={image.url}
+            key={i}
+            alt={image.alt}
+            className="object-cover object-center flex-shrink-0 flex-grow-0 h-full w-full "
+            style={{
+              translate: `${-100 * imgIndex}%`,
+              transition: "translate 300ms ease-in-out",
+            }}
+          />
+        ))}
       </div>
-
-      {/* {content.map(a => (
-        <div key={a.name} className="relative h-full flex-1">
-          <img src={a.bgImage} alt="travel" />
-          <div className="absolute rounded-lg p-8 bottom-4 right-4 w-[525px] bg-mainWhite/80">
-            <p className="text-xl">{a.text}</p>
-          </div>
-        </div>
-      ))} */}
-    </>
+      <DotNav
+        currentImgIndex={imgIndex}
+        setImgIndex={setImgIndex}
+        imgsize={[1, 2, 3]}
+      />
+    </div>
   );
 }
 

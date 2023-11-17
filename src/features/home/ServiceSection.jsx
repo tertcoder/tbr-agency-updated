@@ -1,6 +1,14 @@
 import place from "../../assets/images/place.jpg";
-import DotNav from "../../ui/DotNav";
-import Overlay from "../../ui/Overlay";
+import hotels from "../../assets/images/hotels.jpg";
+import traveling from "../../assets/images/traveling.jpg";
+
+import Slider from "../../ui/Slider";
+
+const images = [
+  { url: place, alt: "TBR Places" },
+  { url: hotels, alt: "TBR Hotels" },
+  { url: traveling, alt: "TBR Traveling" },
+];
 
 function ServiceSection() {
   return (
@@ -12,15 +20,7 @@ function ServiceSection() {
         What TBR-Agency has for you
       </h2>
       <div className="grid grid-rows-[500px_auto] lg:grid-rows-none lg:grid-cols-[350px_1fr]   xl:grid-cols-[500px_1fr] h-full rounded-xl lg:space-x-4">
-        <div className="bg-mainBlack text-mainWhite text-4xl relative rounded-t-xl lg:rounded-xl overflow-hidden ">
-          <Overlay className="bg-mainBlack/20" />
-          <img
-            src={place}
-            alt="TBR Places"
-            className="object-cover object-center h-full w-full"
-          />
-          <DotNav imgsize={[1, 2, 3]} />
-        </div>
+        <Slider images={images} />
         <div className="bg-mainWhite shadow-sm text-mainBlack grid grid-cols-1 gap-4 xl:grid-cols-2 rounded-b-xl lg:rounded-xl p-4 md:px-8 md:py-10 lg:px-10 lg:py-10">
           <div className="bg-white p-5 md:p-6 rounded-lg shadow-sm">
             <h3 className="text-2xl mb-5 font-medium text-main">
