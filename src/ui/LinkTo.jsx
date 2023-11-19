@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 function LinkTo({ type, className, to, children }) {
   const base = twMerge(
-    `font-semibold bg-main text-mainWhite rounded-xl hover:opacity-90 duration-150 text-lg`,
+    `font-semibold bg-main text-mainWhite rounded-xl text-center hover:opacity-90 duration-150 text-lg`,
     `${className && className}`
   );
   const prime = "py-3 px-6";
