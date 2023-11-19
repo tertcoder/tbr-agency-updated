@@ -15,10 +15,10 @@ function NavigationHeader() {
           Services
         </a>
       </div>
-      <LinkTo type="primary" to="/login" className="hidden md:flex ">
+      <LinkTo type="primary" to="/login">
         Get Started
       </LinkTo>
-      <MenuMobile />
+      {/* <MenuMobile /> */}
     </div>
   );
 }
