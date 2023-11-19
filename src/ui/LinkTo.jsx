@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
-function Button({ type, className, children }) {
+function LinkTo({ type, className, to, children }) {
   const base = twMerge(
     `font-semibold bg-main text-mainWhite rounded-xl hover:opacity-90 duration-150 text-lg`,
     `${className && className}`
@@ -13,16 +14,22 @@ function Button({ type, className, children }) {
   return (
     <>
       {type === "prime" && (
-        <button className={twMerge(base, prime)}>{children}</button>
+        <Link to={to} className={twMerge(base, prime)}>
+          {children}
+        </Link>
       )}
       {type === "primeLight" && (
-        <button className={twMerge(base, primeLight)}>{children}</button>
+        <Link to={to} className={twMerge(base, primeLight)}>
+          {children}
+        </Link>
       )}
       {type === "primary" && (
-        <button className={twMerge(base, primary)}>{children}</button>
+        <Link to={to} className={twMerge(base, primary)}>
+          {children}
+        </Link>
       )}
     </>
   );
 }
 
-export default Button;
+export default LinkTo;

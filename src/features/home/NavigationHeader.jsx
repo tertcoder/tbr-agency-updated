@@ -1,4 +1,4 @@
-import Button from "../../ui/Button";
+import LinkTo from "../../ui/LinkTo";
 import Logo from "../../ui/Logo";
 function NavigationHeader() {
   return (
@@ -15,9 +15,9 @@ function NavigationHeader() {
           Services
         </a>
       </div>
-      <Button type="primary" className="hidden md:flex ">
+      <LinkTo type="primary" to="/login" className="hidden md:flex ">
         Get Started
-      </Button>
+      </LinkTo>
       <MenuMobile />
     </div>
   );

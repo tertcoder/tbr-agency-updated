@@ -1,4 +1,4 @@
-import Button from "../../ui/Button";
+import LinkTo from "../../ui/LinkTo";
 import tbrsvg from "../../assets/images/tbr.svg";
 
 function HeroSection() {
@@ -18,7 +18,9 @@ function HeroSection() {
           platform.
         </p>
         <div>
-          <Button type="prime">Get Started</Button>
+          <LinkTo type="prime" to="/login">
+            Get Started
+          </LinkTo>
         </div>
       </div>
       <div className=" hidden md:block self-center">

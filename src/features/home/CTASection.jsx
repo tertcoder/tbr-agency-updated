@@ -1,4 +1,4 @@
-import Button from "../../ui/Button";
+import LinkTo from "../../ui/LinkTo";
 import taxi from "../../assets/images/taxi.jpeg";
 import Overlay from "../../ui/Overlay";
 
@@ -15,11 +15,15 @@ function CTASection() {
           </h1>
           <p className="text-lg  w-full lg:max-w-2xl text-mainLight/60 mb-10">
             Need to work with us. Such as be our driver, posting your hotel and
-            house to rent. Click the button below to start a business with us
+            house to rent. Click the LinkTo below to start a business with us
           </p>
           <div className="flex gap-4 md:gap-8 flex-col md:flex-row">
-            <Button type="prime">Work With Us</Button>
-            <Button type="primeLight">Get Started</Button>
+            <LinkTo type="prime" to="/login">
+              Work With Us
+            </LinkTo>
+            <LinkTo type="primeLight" to="/login">
+              Get Started
+            </LinkTo>
           </div>
         </div>
         <div className="hidden lg:block lg:flex-1 relative">

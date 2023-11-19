@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Overlay from "./Overlay";
+import LinkTo from "./LinkTo";
 
 function Slider({ images }) {
   const [imgIndex, setImgIndex] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setImgIndex(index => {
         if (index === images.length - 1) return 0;
         return index + 1;
       });
     }, 3000);
-    return () => {};
+    return () => clearInterval(interval);
   }, [images.length]);
 
   return (
@@ -29,6 +30,16 @@ function Slider({ images }) {
               translate: `${-100 * imgIndex}%`,
               transition: "translate 300ms ease-in-out",
             }}
+            // style={{
+            //   transform: `translateX(${100 * (i - imgIndex)}%)`,
+            //   transition: "transform 300ms ease-in-out",
+            // }}
+            // style={{
+            //   transform: `translateX(${
+            //     (100 * (i - imgIndex + images.length)) % images.length
+            //   }%)`,
+            //   transition: "transform 300ms ease-in-out",
+            // }}
           />
         ))}
       </div>
