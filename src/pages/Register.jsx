@@ -79,7 +79,7 @@ function Register() {
         </div>
       </div>
       <div>
-        <img src={image} className="object-cover  w-full h-full" />
+        <img src={image} className="object-cover w-full h-full" />
       </div>
     </div>
   );
