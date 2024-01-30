@@ -25,7 +25,7 @@ function Login() {
                 className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
               />
             </label>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col  space-y-2">
               <label className="flex flex-col">
                 <span className="">Password:</span>
                 <input
