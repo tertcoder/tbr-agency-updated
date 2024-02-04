@@ -15,16 +15,22 @@ function NavigationHeader() {
           Services
         </a>
       </div>
-      <LinkTo type="primary" to="/login" className="hidden md:flex ">
+      <LinkTo type="primary" to="/login">
         Get Started
       </LinkTo>
-      <MenuMobile />
+      {/* <MenuMobile /> */}
     </div>
   );
 }
 
 function MenuMobile() {
-  return <div className="md:hidden">Ola Maniga</div>;
+  return (
+    <div className="md:hidden">
+      <LinkTo type="primary" to="/login" className="flex ">
+        Get Started
+      </LinkTo>
+    </div>
+  );
 }
 
 export default NavigationHeader;
