@@ -6,7 +6,7 @@ function Input({ className, label, type }) {
     <label className={twMerge("flex flex-col", className)}>
       <span>{label}:</span>
       <input
-        type={type}
+        type={`${type}`}
         placeholder={`Enter your ${label.toLowerCase()} ${
           label.toLowerCase() === "confirm password" ? "again" : ""
         }`}
