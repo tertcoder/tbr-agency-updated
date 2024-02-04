@@ -3,6 +3,7 @@
 import image from "../assets/images/traveling.jpg";
 import google from "../assets/images/google.svg";
 import { Link } from "react-router-dom";
+import Input from "../ui/Input";
 // import logo from "../assets/images/tbr-logo.png";
 
 function Register() {
@@ -25,48 +26,12 @@ function Register() {
           </p>
           <form className="mt-8 space-y-4 w-full">
             <div className="flex w-full max-lg:flex-col gap-4">
-              <label className="flex flex-1 flex-col">
-                <span className="">Firstname:</span>
-                <input
-                  type="text"
-                  placeholder="Enter your firstname"
-                  className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
-                />
-              </label>
-              <label className="flex flex-1 flex-col">
-                <span className="">Lastname:</span>
-                <input
-                  type="text"
-                  placeholder="Enter your lastname"
-                  className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
-                />
-              </label>
+              <Input type="text" label="Firstname" className="flex-1" />
+              <Input type="text" label="Lastname" className="flex-1" />
             </div>
-            <label className="flex flex-col">
-              <span className="">Email address:</span>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
-              />
-            </label>
-
-            <label className="flex flex-col">
-              <span className="">Password:</span>
-              <input
-                type="password"
-                placeholder="Enter your password"
-                className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="">Confirm Password:</span>
-              <input
-                type="password"
-                placeholder="Enter your password again"
-                className="py-3 px-3 placeholder:text-sm rounded-lg bg-mainWhite shadow-sm outline-none border border-transparent duration-150 focus:border-mainLight"
-              />
-            </label>
+            <Input type="email" label="Email address" />
+            <Input type="password" label="Password" />
+            <Input type="password" label="Confirm Password" />
 
             <button className="bg-main  text-mainWhite w-full py-3 rounded-lg font-semibold shadow-sm text-lg">
               Sign up
